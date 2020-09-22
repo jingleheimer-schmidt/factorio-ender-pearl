@@ -1,0 +1,10 @@
+{
+	"name": "factorio-ender-pearl",
+	"version": "0.0.1",
+	"title": "Ender Pearl",
+	"description": "Adds an ender pearl you can throw to teleport, just like minecraft. Requires the Alchemical Romance mod.",
+	"author": "asher_sky",
+	"contact": "jules@jules.click",
+	"factorio_version": "1.0",
+  "dependencies": ["alchemical-romance >= 0.0.1"]
+}
