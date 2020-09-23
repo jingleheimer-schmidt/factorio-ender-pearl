@@ -16,8 +16,9 @@ script.on_event(defines.events.on_player_used_capsule, function(event)
     end
 end)
 
+-- pretty sure this function will not work at all
 function teleport_player_to_enderpearl(player, enderpearl_position)
-  local position = enderpearl_position.surface.find_non_colliding_position("character", enderpearl_position.position, 128, 2)
+  local position = enderpearl_position.surface.find_non_colliding_position("character", enderpearl_position.position, 128, 2) --??????
 
   if position then
       player.print("Nice throw! Total distance: " .. distance(player.position, position))
