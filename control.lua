@@ -18,11 +18,11 @@ end)
 
 -- pretty sure this function will not work at all
 function teleport_player_to_enderpearl(player, enderpearl_position)
-  local position = enderpearl_position.surface.find_non_colliding_position("character", enderpearl_position.position, 128, 2) --??????
+  local valid_position = enderpearl_position.surface.find_non_colliding_position("character", enderpearl_position, 128, 2) -- hopefully this works???? it should return a non_colliding_position or nil
 
-  if position then
-      player.print("Nice throw! Total distance: " .. distance(player.position, position))
-      player.teleport(position, enderpearl.surface)
+  if valid_position then
+      player.print("Nice throw! Total distance: " .. distance(player.position, valid_position))
+      player.teleport(valid_position, enderpearl.surface)
   else
       player.print("Teleport failed: No valid locations nearby")
   end
