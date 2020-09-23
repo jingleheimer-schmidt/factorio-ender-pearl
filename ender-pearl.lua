@@ -21,6 +21,7 @@ local enderPearl = {
       ammo_category = "capsule",
       cooldown = 30,
       projectile_creation_distance = 0.6,
+      min_range = 15,
       range = 75,
       ammo_type =
       {
@@ -32,8 +33,13 @@ local enderPearl = {
             type = "direct",
             action_delivery =
             {
-              type = "projectile",
-              projectile = "poison-capsule",
+              type = "instant",
+              target_effects = {
+                type = "script",
+                effect_id = "ender_pearl_effect_id"
+              },
+              -- type = "projectile",
+              -- projectile = "poison-capsule", -- this is what triggers the poison cloud??
               starting_speed = 0.3
             }
           },
