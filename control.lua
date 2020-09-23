@@ -1,5 +1,23 @@
-function on_player_used_capsule(player, enderpearl)
-  local position = enderpearl.surface.find_non_colliding_position("character", enderpearl.position, 128, 2)
+
+-- runs when a capsule is used
+script.on_event(defines.events.on_player_used_capsule, function(event)
+
+    -- adds the player as a variable
+    local player = game.players[event.player_index]
+
+    -- adds the ender pearl position as a variable (?)
+    local enderpearl_position = event.position
+
+    -- checks if capsule is an enderpearl, then calls teleport function
+    if event.item == "enderpearl" then
+        teleport_player_to_enderpearl(player, enderpearl_position)
+    else
+        return
+    end
+end)
+
+function teleport_player_to_enderpearl(player, enderpearl_position)
+  local position = enderpearl_position.surface.find_non_colliding_position("character", enderpearl_position.position, 128, 2)
 
   if position then
       player.print("Nice throw! Total distance: " .. distance(player.position, position))
