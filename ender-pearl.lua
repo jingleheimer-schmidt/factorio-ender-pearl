@@ -33,7 +33,7 @@ local enderPearl = {
             type = "direct",
             action_delivery =
             {
-              type = "instant",
+              type = "direct",
               target_effects = {
                 type = "script",
                 effect_id = "ender_pearl_effect_id"
