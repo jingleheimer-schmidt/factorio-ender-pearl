@@ -40,7 +40,7 @@ local enderPearl = {
               {
                 {
                   type = "play-sound",
-                  sound = "__factorio-ender-pearl__/sounds/endereye_launch1.ogg"
+                  sound = "__factorio-ender-pearl__/sounds/enderpearl-launched.ogg"
                 }
               }
             }

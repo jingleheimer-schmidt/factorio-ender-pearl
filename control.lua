@@ -36,7 +36,9 @@ script.on_event(defines.events.on_script_trigger_effect, function(event)
 			   player.health = ouch
 		  end
     else
-    player.player.print("Teleport failed: No valid locations nearby")
+      play_sound{
+        path = "__factorio-ender-pearl__/sounds/enderpearl-failed.ogg", position = enderpearl_position, volume_modifier = 1}
+      player.player.print("Teleport failed: No valid locations nearby")
     end
   else
     return
