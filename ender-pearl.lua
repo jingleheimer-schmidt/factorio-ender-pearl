@@ -21,7 +21,7 @@ local enderPearl = {
       ammo_category = "capsule",
       cooldown = 30,
       projectile_creation_distance = 0.6,
-      min_range = 1,
+      -- min_range = 1,
       range = 50,
       ammo_type =
       {
@@ -35,7 +35,7 @@ local enderPearl = {
             {
               {
                 type = "projectile",
-                projectile = "enderpearl-projectile"
+                projectile = "enderpearl-projectile",
                 target_effects = {
                   type = "script",
                   effect_id = "ender_pearl_effect_id"
