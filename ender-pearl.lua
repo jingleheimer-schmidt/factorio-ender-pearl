@@ -30,7 +30,7 @@ local enderPearl = {
                 starting_speed = 0.3
               },
             }
-          }
+          },
           {
             type = "direct",
             action_delivery =
