@@ -1,13 +1,4 @@
 local enderPearl = {
-  -- type = "capsule",
-  -- name = "ender-pearl",
-  -- capsule_action = {
-  --   type = "throw"},
-  -- icon = "__factorio-ender-pearl__/graphics/Ender_Pearl_JE3_BE2.png",
-  -- icon_size = 160,
-  -- stack_size = 16
-
-
   type = "capsule",
   name = "enderpearl",
   icon = "__factorio-ender-pearl__/graphics/Ender_Pearl_JE3_BE2.png",
@@ -42,11 +33,6 @@ local enderPearl = {
                 },
                 starting_speed = 0.3
               },
-              -- {
-              --   type = "projectile",
-              --   projectile = "poison-capsule", -- this is what triggers the poison cloud??
-              --   starting_speed = 0.3
-              --   }
               }
             }
           -- {
