@@ -31,26 +31,24 @@ local enderPearl = {
               },
             }
           }
-          -- {
-          --   type = "direct",
-          --   action_delivery =
-          --   {
-          --     type = "instant",
-          --     target_effects =
-          --     {
-          --       {
-          --         type = "play-sound",
-          --         sound = sounds.throw_projectile,
-          --       },
-          --     }
-          --   }
-          -- }
+          {
+            type = "direct",
+            action_delivery =
+            {
+              type = "instant",
+              target_effects =
+              {
+                {
+                  type = "play-sound",
+                  sound = "__factorio-ender-pearl__/sounds/endereye_launch1.ogg"
+                }
+              }
+            }
+          }
         }
       }
     }
   },
-  subgroup = "capsule",
-  order = "b[poison-capsule]",
   stack_size = 16
 }
 
