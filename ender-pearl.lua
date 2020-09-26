@@ -30,19 +30,25 @@ local enderPearl = {
         action =
         {
           {
-            type = "projectile",
+            type = "direct",
             action_delivery =
             {
-              type = "projectile",
-              target_effects = {
-                type = "script",
-                effect_id = "ender_pearl_effect_id"
+              {
+                type = "projectile",
+                projectile = "enderpearl-projectile"
+                target_effects = {
+                  type = "script",
+                  effect_id = "ender_pearl_effect_id"
+                },
+                starting_speed = 0.3
               },
-              -- type = "projectile",
-              -- projectile = "poison-capsule", -- this is what triggers the poison cloud??
-              starting_speed = 0.3
+              -- {
+              --   type = "projectile",
+              --   projectile = "poison-capsule", -- this is what triggers the poison cloud??
+              --   starting_speed = 0.3
+              --   }
+              }
             }
-          },
           -- {
           --   type = "direct",
           --   action_delivery =
