@@ -6,18 +6,13 @@ local enderpearlProjectile = {
     action =
     {
       {
+        -- creates the projectile particles when enderpearl is thrown:
         type = "direct",
         action_delivery =
         {
           type = "instant",
           target_effects =
           {
-            -- {
-            --   type = "create-smoke",
-            --   show_in_tooltip = true,
-            --   entity_name = "poison-cloud",
-            --   initial_height = 0
-            -- },
             {
               type = "create-particle",
               particle_name = "poison-capsule-metal-particle",
@@ -33,6 +28,7 @@ local enderpearlProjectile = {
         }
       },
       {
+        -- runs the teleport script when projectile lands:
         type = "direct",
         action_delivery =
         {
