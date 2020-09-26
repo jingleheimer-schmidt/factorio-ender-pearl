@@ -27,14 +27,10 @@ local enderPearl = {
               {
                 type = "projectile",
                 projectile = "enderpearl-projectile",
-                target_effects = {
-                  type = "script",
-                  effect_id = "ender_pearl_effect_id"
-                },
                 starting_speed = 0.3
               },
-              }
             }
+          }
           -- {
           --   type = "direct",
           --   action_delivery =

@@ -13,7 +13,7 @@ script.on_event(defines.events.on_script_trigger_effect, function(event)
   -- checks if capsule is an enderpearl, then calls teleport function
   if event.effect_id == "ender_pearl_effect_id" then
     if valid_position then
-      player.player.print("Nice throw!")
+      -- player.player.print("Nice throw!")
       player.teleport(valid_position)
     else
     player.player.print("Teleport failed: No valid locations nearby")

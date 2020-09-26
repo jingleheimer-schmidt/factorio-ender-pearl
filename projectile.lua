@@ -31,6 +31,19 @@ local enderpearlProjectile = {
             }
           }
         }
+      },
+      {
+        type = "direct",
+        action_delivery =
+        {
+          {
+            type = "instant",
+            target_effects = {
+              type = "script",
+              effect_id = "ender_pearl_effect_id"
+              }
+          }
+        }
       }
     },
     light = {intensity = 0.5, size = 4},
