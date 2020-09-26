@@ -30,16 +30,18 @@ script.on_event(defines.events.on_script_trigger_effect, function(event)
   -- adds the player as a variable
   local player = event.source_entity
 
-  -- -- adds player position as a variable (?)
-  -- local player_position = event.source_position
+  local valid_position = player.surface.find_non_colliding_position("character", enderpearl_position, 2, 1)
 
   -- checks if capsule is an enderpearl, then calls teleport function
   if event.effect_id == "ender_pearl_effect_id" then
-    player.print("Nice throw!")
-    -- Total distance: " .. distance(player.position, valid_position))
-    player.teleport(enderpearl_position)
+    if valid_position then
+      player.player.print("Nice throw!")
+      player.teleport(valid_position)
+    else
+    player.player.print("Teleport failed: No valid locations nearby")
+    end
   else
-    player.print("Teleport failed: No valid locations nearby")
+    return
   end
 
 end)
