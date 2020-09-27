@@ -10,7 +10,7 @@ local enderPearl = {
     {
       type = "projectile",
       ammo_category = "capsule",
-      cooldown = 30,
+      cooldown = 55,
       projectile_creation_distance = 0.6,
       -- min_range = 1,
       range = 50,
@@ -30,21 +30,21 @@ local enderPearl = {
                 starting_speed = 0.3
               },
             }
-          },
-          {
-            type = "direct",
-            action_delivery =
-            {
-              type = "instant",
-              target_effects =
-              {
-                {
-                  type = "play-sound",
-                  sound = "__factorio-ender-pearl__/sounds/enderpearl-launched.ogg"
-                }
-              }
-            }
-          }
+          } --,
+          -- {
+          --   type = "direct",
+          --   action_delivery =
+          --   {
+          --     type = "instant",
+          --     target_effects =
+          --     {
+          --       {
+          --         type = "play-sound",
+          --         sound = "__factorio-ender-pearl__/sounds/enderpearl-launched.ogg"
+          --       }
+          --     }
+          --   }
+          -- }
         }
       }
     }
