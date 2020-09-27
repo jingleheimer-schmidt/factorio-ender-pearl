@@ -41,6 +41,34 @@ local enderpearlProjectile = {
           }
         }
       }
+      -- {
+      --   -- runs the landed sound script when enderpearl lands:
+      --   type = "direct",
+      --   action_delivery =
+      --   {
+      --     {
+      --       type = "instant",
+      --       target_effects = {
+      --         type = "script",
+      --         effect_id = "ender_pearl_landed"
+      --         }
+      --     }
+      --   }
+      -- },
+      -- {
+      --   -- runs the failed sound script when enderpearl fails:
+      --   type = "direct",
+      --   action_delivery =
+      --   {
+      --     {
+      --       type = "instant",
+      --       target_effects = {
+      --         type = "script",
+      --         effect_id = "ender_pearl_failed"
+      --         }
+      --     }
+      --   }
+      -- }
     },
     light = {intensity = 0.5, size = 4},
     animation =
