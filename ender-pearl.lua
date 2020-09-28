@@ -2,6 +2,8 @@ local enderPearl = {
   type = "capsule",
   name = "enderpearl",
   icon = "__factorio-ender-pearl__/graphics/Ender_Pearl_JE3_BE2.png",
+  subgroup = "transport",
+  order = "b[personal-transport]-c[spidertron]-b[remote]-a[enderpearl]",
   icon_size = 160,
   capsule_action =
   {
