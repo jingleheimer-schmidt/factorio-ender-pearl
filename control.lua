@@ -15,7 +15,7 @@ script.on_event(defines.events.on_script_trigger_effect, function(event)
   local valid_position = player.surface.find_non_colliding_position("character", enderpearl_position, 2, 1)
 
   -- calculates distance between player and ender peal target
-  local distance = math.floor(((player_position.x - valid_position.x) ^ 2 + (player_position.y - valid_position.y) ^ 2) ^ 0.5)
+  local distance = math.floor(((player_position.x - enderpearl_position.x) ^ 2 + (player_position.y - enderpearl_position.y) ^ 2) ^ 0.5)
 
   -- calculates a rancom variable between .91 and 1.09
   local almost = (math.random(91, 109))*.01
