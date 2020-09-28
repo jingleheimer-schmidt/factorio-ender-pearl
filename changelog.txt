@@ -1,0 +1,11 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2020-09-27
+  Changes:
+    - ender pearl is now ordered properly in logistic request gui
+    - added changelog
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2020-09-27
+  Changes:
+    - Initial release on mod portal
