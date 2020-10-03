@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 2020-10-03
+  Changes:
+    - added woosh sound when ender pearl is thrown
+    - added damage sounds when player lands depending on distance traveled
+    - added ender pearl breaking sound when teleport can't find a valid position
+    - increased range to 64
+---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 2020-10-02
   Changes:
