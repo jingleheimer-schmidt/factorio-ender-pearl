@@ -36,7 +36,7 @@ script.on_event(defines.events.on_script_trigger_effect, function(event)
 			   player.health = ouch
 		  end
     else
-      player.player.print("Teleport aborted: No safe landing nearby")
+      player.player.print("No safe landing nearby")
     end
   else
     return
