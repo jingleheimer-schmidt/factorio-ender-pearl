@@ -1,7 +1,7 @@
 local enderPearlTechnology = {
   type = "technology",
   name = "enderpearl-technology",
-  icon = "__factorio-ender-pearl__/graphics/Ender_Pearl_JE3_BE2.png",
+  icon = "__factorio-ender-pearl__/graphics/Ender_Pearl_JE3_BE2_technology-icon.png",
   icon_size = 160,
   unit = {
     count = 150,
