@@ -1,6 +1,6 @@
 local enderPearlRecipe = {
     type = "recipe",
-    name = "ender-pearl",
+    name = "enderpearl-recipe",
     subgroup = "transport",
     order = "b[personal-transport]-c[spidertron]-b[remote]-a[enderpearl]",
     ingredients = {
@@ -10,7 +10,7 @@ local enderPearlRecipe = {
     },
     energy_required = .5,
     result = "enderpearl",
-    enabled = "true"
+    enabled = "false"
 }
 
 data:extend({
