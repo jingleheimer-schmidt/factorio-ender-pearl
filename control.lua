@@ -1,4 +1,3 @@
-
 -- runs when a script is triggered
 script.on_event(defines.events.on_script_trigger_effect, function(event)
 
@@ -36,7 +35,9 @@ script.on_event(defines.events.on_script_trigger_effect, function(event)
 			   player.health = ouch
 		  end
     else
-      player.player.print("No safe landing nearby")
+      -- player.player.print("No safe landing nearby")
+      game.play_sound{
+        path = "ender-pearl-failed-landing", position = player_position, volume_modifier = 1}
     end
   else
     return
@@ -46,13 +47,13 @@ script.on_event(defines.events.on_script_trigger_effect, function(event)
   -- if event.effect_id == "ender_pearl_failed" then
   --   if valid_position == nil then
   --     game.play_sound{
-  --       path = "__factorio-ender-pearl__/sounds/enderpearl-failed.ogg", position = valid_position, volume_modifier = 1}
+  --       path = "__factorio-ender-pearl__/sounds/enderpearl-failed.ogg", position = player_position, volume_modifier = .8}
   --   else
   --     return
   --   end
   -- else
   --   return
   -- end
-  --
+
 
 end)
