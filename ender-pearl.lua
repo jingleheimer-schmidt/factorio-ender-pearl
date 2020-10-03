@@ -17,7 +17,7 @@ local enderPearl = {
       cooldown = 33,
       projectile_creation_distance = 0.6,
       -- min_range = 1,
-      range = 50,
+      range = 64,
       ammo_type =
       {
         category = "capsule",
