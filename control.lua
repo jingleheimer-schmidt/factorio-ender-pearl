@@ -19,8 +19,11 @@ script.on_event(defines.events.on_script_trigger_effect, function(event)
   -- calculates a rancom variable between .91 and 1.09
   local almost = (math.random(91, 109))*.01
 
+  -- saves health deduction
+  local health_deduction = distance*(.88*almost)
+
   -- subtracts ~88% of distance traveled from player health
-  local ouch = player.health-distance*(.88*almost)
+  local ouch = player.health-health_deduction
 
   -- checks if capsule is an enderpearl, then teleports player to pearl
   if event.effect_id == "ender_pearl_effect_id" then
@@ -29,10 +32,19 @@ script.on_event(defines.events.on_script_trigger_effect, function(event)
       player.teleport(valid_position)
       -- if player health will be at or below zero then kill the them
 		  if ( ouch <= 0 ) then
-			     player.die()
+           game.play_sound{
+             path = "fall-big", position = valid_position, volume_modifier = 1}
+           player.die()
       -- otherwise subtract ~88% of distance traveled from player health
       else
 			   player.health = ouch
+         if ( health_deduction <= 16) then
+           game.play_sound{
+             path = "fall-small", position = valid_position, volume_modifier = 1}
+         else
+           game.play_sound{
+             path = "fall-big", position = valid_position, volume_modifier = 1}
+         end
 		  end
     else
       -- player.player.print("No safe landing nearby")
