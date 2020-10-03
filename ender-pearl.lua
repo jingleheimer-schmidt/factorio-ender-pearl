@@ -1,3 +1,5 @@
+local sounds = require ("ender-sounds")
+
 local enderPearl = {
   type = "capsule",
   name = "enderpearl",
@@ -32,21 +34,21 @@ local enderPearl = {
                 starting_speed = 0.3
               },
             }
-          } --,
-          -- {
-          --   type = "direct",
-          --   action_delivery =
-          --   {
-          --     type = "instant",
-          --     target_effects =
-          --     {
-          --       {
-          --         type = "play-sound",
-          --         sound = "__factorio-ender-pearl__/sounds/enderpearl-launched.ogg"
-          --       }
-          --     }
-          --   }
-          -- }
+          },
+          {
+            type = "direct",
+            action_delivery =
+            {
+              type = "instant",
+              target_effects =
+              {
+                {
+                  type = "play-sound",
+                  sound = sounds.enderpearl_launched
+                }
+              }
+            }
+          }
         }
       }
     }

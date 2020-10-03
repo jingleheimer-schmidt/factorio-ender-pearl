@@ -54,12 +54,5 @@ script.on_event(defines.events.on_script_trigger_effect, function(event)
   --   return
   -- end
   --
-  -- -- check if enderpearl has been thrown, then plays thorw sound
-  -- if event.effect_id == "ender_pearl_launched" then
-  --   game.play_sound{
-  --     path = "__factorio-ender-pearl__/sounds/enderpearl-launched.ogg", position = player_position, volume_modifier = 1}
-  -- else
-  --   return
-  -- end
 
 end)
