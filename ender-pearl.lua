@@ -56,14 +56,6 @@ local enderPearl = {
   stack_size = 16
 }
 
-local enderpearlFailedLanding = {
-  name = "ender-pearl-failed-landing",
-  type = "sound",
-  filename = "__factorio-ender-pearl__/sounds/enderpearl-failed.ogg",
-  volume = 1
-}
-
 data:extend({
-  enderPearl,
-  enderpearlFailedLanding
+  enderPearl
 })
