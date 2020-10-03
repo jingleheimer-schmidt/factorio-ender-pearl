@@ -55,17 +55,4 @@ script.on_event(defines.events.on_script_trigger_effect, function(event)
     return
   end
 
-  -- -- checks for if enderpearl failed, then plays sound
-  -- if event.effect_id == "ender_pearl_failed" then
-  --   if valid_position == nil then
-  --     game.play_sound{
-  --       path = "__factorio-ender-pearl__/sounds/enderpearl-failed.ogg", position = player_position, volume_modifier = .8}
-  --   else
-  --     return
-  --   end
-  -- else
-  --   return
-  -- end
-
-
 end)
