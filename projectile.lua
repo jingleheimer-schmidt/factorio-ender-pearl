@@ -73,7 +73,7 @@ local enderpearlProjectile = {
     light = {intensity = 0.5, size = 4},
     animation =
     {
-      filename = "__base__/graphics/entity/poison-capsule/poison-capsule.png",
+      filename = "__factorio-ender-pearl__/graphics/projectile/ender-pearl-capsule.png",
       frame_count = 16,
       line_length = 8,
       animation_speed = 0.250,
@@ -83,7 +83,7 @@ local enderpearlProjectile = {
       priority = "high",
       hr_version =
       {
-        filename = "__base__/graphics/entity/poison-capsule/hr-poison-capsule.png",
+        filename = "__factorio-ender-pearl__/graphics/projectile/hr-ender-pearl-capsule.png",
         frame_count = 16,
         line_length = 8,
         animation_speed = 0.250,
