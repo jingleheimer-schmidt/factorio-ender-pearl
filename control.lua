@@ -16,6 +16,28 @@ function calculate_ouch(player_position, valid_position)
   return ouch
 end
 
+-- damage logic and sounds
+function run_damage_logic(player_position, valid_position, player)
+  -- calculate ouch factor
+  local ouch = calculate_ouch(player_position, valid_position)
+  -- if player health will be at or below zero then kill the them
+  if ( (player.health - ouch) <= 0 ) then
+    game.play_sound{
+      path = "fall-big", position = valid_position, volume_modifier = 1}
+    player.die()
+  -- otherwise subtract ~88% of distance traveled from player health
+  else
+     player.health = player.health - ouch
+     if ( ouch <= 16) then
+       game.play_sound{
+         path = "fall-small", position = valid_position, volume_modifier = 1}
+     else
+       game.play_sound{
+         path = "fall-big", position = valid_position, volume_modifier = 1}
+     end
+  end
+end
+
 -- runs when a script is triggered
 script.on_event(defines.events.on_script_trigger_effect, function(event)
   -- checks if script is triggered by an enderpearl
@@ -31,24 +53,7 @@ script.on_event(defines.events.on_script_trigger_effect, function(event)
     if valid_position then
       -- teleports player to ender pearl
       player.teleport(valid_position)
-      -- calculate ouch factor
-      local ouch = calculate_ouch(player_position, valid_position)
-      -- if player health will be at or below zero then kill the them
-		  if ( ouch <= 0 ) then
-           game.play_sound{
-             path = "fall-big", position = valid_position, volume_modifier = 1}
-           player.die()
-      -- otherwise subtract ~88% of distance traveled from player health
-      else
-			   player.health = player.health - ouch
-         if ( ouch <= 16) then
-           game.play_sound{
-             path = "fall-small", position = valid_position, volume_modifier = 1}
-         else
-           game.play_sound{
-             path = "fall-big", position = valid_position, volume_modifier = 1}
-         end
-		  end
+      run_damage_logic(player_position, valid_position, player)
     else
       -- player.player.print("No safe landing nearby")
       game.play_sound{
