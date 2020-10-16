@@ -24,7 +24,7 @@ function run_damage_logic(player_position, valid_position, player)
   if ( (player.health - ouch) <= 0 ) then
     game.play_sound{
       path = "fall-big", position = valid_position, volume_modifier = 1}
-    player.die()
+    player.die("neutral", player)
   -- otherwise subtract ~88% of distance traveled from player health
   else
      player.health = player.health - ouch
