@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 2020-10-15
+  Changes:
+    - rewrote teleporting logic to use functions
+    - adjusted damage calculation to be more accurate
+    - added death message "<player> was killed by <player>"
+---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 2020-10-03
   Changes:
