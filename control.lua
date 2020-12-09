@@ -42,6 +42,10 @@ end
 script.on_event(defines.events.on_script_trigger_effect, function(event)
   -- checks if script is triggered by an enderpearl
   if event.effect_id == "ender_pearl_effect_id" then
+    -- make sure the player character still exists
+    if not event.source_entity then
+      return
+    end
     -- adds the ender pearl target position as a variable
     local enderpearl_position = event.target_position
     -- adds the player as a variable
