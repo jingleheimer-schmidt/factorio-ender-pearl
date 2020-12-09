@@ -13,10 +13,10 @@ local enderPearl = {
     attack_parameters =
     {
       type = "projectile",
+      activation_type = "throw",
       ammo_category = "capsule",
-      cooldown = 33,
-      projectile_creation_distance = 0.6,
-      -- min_range = 1,
+      cooldown = 30,
+      projectile_creation_distance = 0,
       range = 64,
       ammo_type =
       {
@@ -31,7 +31,7 @@ local enderPearl = {
               {
                 type = "projectile",
                 projectile = "enderpearl-projectile",
-                starting_speed = 0.3
+                starting_speed = 0.5
               },
             }
           },

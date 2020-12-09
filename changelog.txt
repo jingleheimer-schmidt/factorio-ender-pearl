@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 2020-12-08
+  Changes:
+    - update to factorio version 1.1
+    - fixed crash when player died before ender pearl lands
+    - minor adjustments to throwing speed and projectile rendering
+    - added "thrown" tooltip
+---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 2020-10-15
   Changes:
