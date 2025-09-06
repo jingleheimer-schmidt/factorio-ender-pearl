@@ -1,9 +1,18 @@
 {
 	"name": "factorio-ender-pearl",
-	"version": "0.0.7",
+	"version": "0.1.0",
 	"title": "Ender pearl",
 	"description": "Adds an ender pearl you can throw to teleport, just like minecraft.",
 	"author": "asher_sky",
-	"dependencies": ["base >= 1.1.0"],
-	"factorio_version": "1.1"
+	"dependencies": [
+		"base"
+	],
+	"factorio_version": "2.0",
+	"package": {
+		"ignore": [
+			"**/*.psd"
+		],
+		"sync_portal_details": true,
+		"readme": "readme.md"
+	}
 }
